@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+<link href="css/style-jq.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.5.1.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<header>
+<h1>객체</h1>
+</header>
+<section>
+  <h2>객체</h2>
+  <p>
+    객체란 여러 종류의 속성(property)을 가지고 있는 데이터의 집합이다. 각 속성에는 데이터가 저장되어 있으므로 
+     '각종 데이터를 하나로 모아서 하나의 변수로 처리할 수 있는 데이터'라고 할수도 있다. 언뜻 보면 배열과 비슷하게 느껴질 수도 있으나, 
+      그 성격이 서로 조금씩 다르다.
+  </p>
+  <h2>객체 작성 방법</h2>
+  <p>객체를 작성할 때는 중괄호{}를 사용한다. 배열과 마찬가지로 생성한 객체를 변수에 저장하는 것이 일반적이므로 
+     보통은 다음과 같은 형식을 사용한다.
+  </p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;변수명&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;속성:&nbsp;데이터,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;속성:&nbsp;데이터,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;속성:&nbsp;데이터</div><div style="padding:0 6px; white-space:pre; line-height:130%">};</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>아래는 직접 객체를 작성한 예이다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;person&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;age:&nbsp;<span style="color:#c10aff">16</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;job:&nbsp;<span style="color:#ffd500">"student"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;town:&nbsp;<span style="color:#ffd500">"seoul"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">};</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>속성의 개수에는 제한이 없다. 각 프로퍼티에 접근하는 방법은 아래와 같다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(person.age);&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">person.town&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">"bucheon"</span>;&nbsp;<span style="color:#999999">//&nbsp;속성값의&nbsp;변경</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(person.town)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>객체의 속성으로 함수가 포함될 수도 있다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;person&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;age:&nbsp;<span style="color:#c10aff">16</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;job:&nbsp;<span style="color:#ffd500">"student"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;town:&nbsp;<span style="color:#ffd500">"seoul"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;sayHello:&nbsp;<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">window</span>.<span style="color:#4be6fa">alert</span>(<span style="color:#ffd500">"Hello!"</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">};</div><div style="padding:0 6px; white-space:pre; line-height:130%">person.sayHello();</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br>
+  <h2>객체 사용법을 알아야 하는 이유</h2>
+  <p>추후 서버로부터 응답을 받아왔을 때 객체형의 데이터를 처리해야 하는 상황이 생길 수 있다.</p>
+  <br><br>
+  <hr>
+  <br><br>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+$(document).ready(function(){
+  let arr = [1,2,3,4,5];
+  
+  // 하나의 요소가 두개의 값(속성, 속성값)으로 이루어져 있다!
+  // 속성(key) : 데이터의 이름
+  // 속성값(value) : 데이터(값, 기능)
+  /*
+    객체란 : 기능과 속성을 가지고 있는 복합적인 데이터!
+  */
+  let obj = {
+    key1 : "value1",
+    key2 : "value2",
+    key3 : function(){ console.log("value3") }
+  };
+  
+  const person = {
+    name : "강윤호",
+    town : "부천시 원미구 심곡동",
+    job : "학원강사 외...",
+    sayHello : function(){
+      window.alert("Hello~");
+    }
+  }
+  
+  console.log(person.job);
+  console.log(person.name);
+  person.town = "서울시 서대문구 창천동";
+  console.log(person.town);
+  person.sayHello(); // 기능은 함수다! 따라서 호출 필!
+});
+</script>
+</body>
+</html>
+
+
+
+
+

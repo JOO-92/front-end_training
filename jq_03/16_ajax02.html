@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax와 JSON</title>
+<link href="css/style-jq.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.5.1.min.js"></script>
+<style>
+  table{
+    color : darkmagenta;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 2px solid darkblue;
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>ajax와 JSON</h1>
+</header>
+<section>
+  <h2>JSON 데이터란</h2>
+  <p>JSON은 JavaScript Object Notation의 약자로 자바스크립트 객체 표기법을 말한다. JSON은 key와 value 값이 쌍으로 구성된 형태의 객체 표기법으로,
+      클라이언트와 서버 사이에 정보를 교환하기 위한 목적으로 사용된다. JSON의 표기법은 무척 간단하다.
+  </p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;json&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;{key1:value1,&nbsp;key2:&nbsp;value2,&nbsp;key3:&nbsp;value3};</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+
+  <p>자바스크립트에서는 JSON 데이터 관련 처리 메소드를 제공한다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;json&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'{"key1":1,&nbsp;"key2":&nbsp;2,&nbsp;"key3":&nbsp;3}'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">const&nbsp;result&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;JSON.parse(json);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(result)</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#ff3399">typeof</span>&nbsp;result)</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br>
+
+  <h2>날씨 데이터 API 호출하여 JSON 데이터 처리하기</h2>
+  <p>해외 사이트인 openweathermap을 통해 날씨 데이터를 읽어올 수 있다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div><div style="line-height:130%">14</div><div style="line-height:130%">15</div><div style="line-height:130%">16</div><div style="line-height:130%">17</div><div style="line-height:130%">18</div><div style="line-height:130%">19</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">$(<span style="color:#4be6fa">document</span>).ready(<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">"보내봐"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;$.ajax({</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;url:<span style="color:#ffd500">"http://api.openweathermap.org/data/2.5/weather"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;<span style="color:#ffd500">"get"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q:&nbsp;<span style="color:#ffd500">"Seoul"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appid:&nbsp;<span style="color:#ffd500">"3418e4d33e1d68afaadbb4a700f37d38"</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;},</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;dataType:&nbsp;<span style="color:#ffd500">"json"</span>,</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;error:&nbsp;<span style="color:#ff3399">function</span>(err){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.error(err.status)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;},</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;success:&nbsp;<span style="color:#ff3399">function</span>(result){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(<span style="color:#ffd500">"끝"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(result)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;})</div><div style="padding:0 6px; white-space:pre; line-height:130%">});</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br><br>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        <th>온도(섭씨)</th>
+        <th>체감온도(섭씨)</th>
+        <th>최고온도(섭씨)</th>
+        <th>최저온도(섭씨)</th>
+        <th>습도(%)</th>
+        <th>기압</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="temp">1</td>
+        <td id="feels_like">2</td>
+        <td id="temp_max">3</td>
+        <td id="temp_min">4</td>
+        <td id="humidity">5</td>
+        <td id="pressure">6</td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+$(document).ready(function(){
+  $.ajax({
+    url:"http://api.openweathermap.org/data/2.5/weather",
+    type: "get",
+    data: {
+      q: "London",
+      appid: "3418e4d33e1d68afaadbb4a700f37d38"
+    },
+    dataType: "json",
+    error: function(err){
+      console.error(err.status)
+    },
+    success: function(result){
+      const wheatherData = result.main
+      console.log(wheatherData.temp)
+      // toFixed(n) : 소수점 n번째에서 자른다!
+      $("#temp").text((wheatherData.temp-273.15).toFixed(2));
+      $("#feels_like").text((wheatherData.feels_like-273.15).toFixed(2));
+      $("#temp_max").text((wheatherData.temp_max-273.15).toFixed(2));
+      $("#temp_min").text((wheatherData.temp_min-273.15).toFixed(2));
+      $("#humidity").text(wheatherData.humidity);
+      $("#pressure").text(wheatherData.pressure);
+    }
+  })
+});
+</script>
+</body>
+</html>
+
+
+
+

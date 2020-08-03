@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cookie</title>
+<link href="css/style-jq.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<style>
+</style>
+</head>
+<body>
+<header>
+<h1>Cookie</h1>
+</header>
+<section>
+  <h2>쿠키란?</h2>
+  <p>
+    쿠키란, 브라우저에 저장되는 작은 데이터를 가리킨다. 브라우저와 웹 서버가 쿠키의 데이터를 서로 교환하며 주로 
+     쇼핑몰 사이트나 SNS사이트 등에서 사용자 로그인 정보를 관리하기 위해 사용된다. 
+     <br><br>
+     쿠키는 기본적으로 브라우저와 웹 서버가 데이터를 교환하기 위한 구조지만, 자바스크립트도 이 데이터를 읽고 쓸 수 있다.   
+  </p>
+
+  <p>HTML</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">div</span>&nbsp;<span style="color:#a8ff58">class</span>=<span style="color:#ffd500">"survey"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span>프론트엔드&nbsp;재밌나요?<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">form</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"form"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">action</span>=<span style="color:#ffd500">"17_complete.html"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"radio"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"frequency"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>&nbsp;재미있어요!&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">br</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"radio"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"frequency"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>&nbsp;그냥&nbsp;그래요.&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">br</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"radio"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"frequency"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>&nbsp;좀&nbsp;별로에요&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">br</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"radio"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"frequency"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>&nbsp;극.혐.&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">br</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">input</span>&nbsp;<span style="color:#a8ff58">type</span>=<span style="color:#ffd500">"submit"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">name</span>=<span style="color:#ffd500">"전송하기"</span><span style="color:#a8ff58"></span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"submit"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">br</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">form</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">button</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"remove"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span>쿠키&nbsp;삭제<span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">button</span><span style="color:#f0f0f0">&gt;</span></div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">div</span><span style="color:#f0f0f0">&gt;</span></div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>JS</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div><div style="line-height:130%">9</div><div style="line-height:130%">10</div><div style="line-height:130%">11</div><div style="line-height:130%">12</div><div style="line-height:130%">13</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">$(<span style="color:#ffd500">'#form'</span>).on(<span style="color:#ffd500">'submit'</span>,&nbsp;<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log($.cookie())</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#ff3399">if</span>($.cookie(<span style="color:#ffd500">'answered'</span>)&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'yes'</span>){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4be6fa">window</span>.<span style="color:#4be6fa">alert</span>(<span style="color:#ffd500">'이미&nbsp;응답했습니다.'</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;<span style="color:#c10aff">false</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}&nbsp;<span style="color:#ff3399">else</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;&nbsp;&nbsp;$.cookie(<span style="color:#ffd500">'answered'</span>,&nbsp;<span style="color:#ffd500">'yes'</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;}</div><div style="padding:0 6px; white-space:pre; line-height:130%">})&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">$(<span style="color:#ffd500">'#remove'</span>).click(<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;$.removeCookie(<span style="color:#ffd500">'answered'</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">})</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br><br>
+  <hr>
+<div class="survey">
+  <p>프론트엔드 재밌나요?</p>
+  <form id="form" action="17_complete.html">
+    <input type="radio" name="frequency"> 재미있어요! <br>
+    <input type="radio" name="frequency"> 그냥 그래요. <br>
+    <input type="radio" name="frequency"> 좀 별로에요 <br>
+    <input type="radio" name="frequency"> 극.혐. <br>
+    
+    <input type="submit" name="전송하기" id="submit"><br>
+  </form>
+  <button id="remove">쿠키 삭제</button>
+</div>
+  <br><br>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+$(document).ready(function(){
+  
+  $('#form').on('submit', function(){
+    console.log($.cookie()) // 현재 쿠키 데이터 조회!
+    if($.cookie('answered') === 'yes'){
+      window.alert('이미 응답했습니다.')
+      return false;
+    } else {
+      // answered 라는 이름의 쿠키 값을 yes로 지정하여
+      // 쿠키에 저장하자!
+      $.cookie('answered', 'yes')
+    }
+  }) 
+
+  $('#remove').click(function(){
+    // 해당 이름을 가진 쿠키 데이터 삭제!
+    $.removeCookie('answered')
+  })
+  
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체란</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<h1>객체란</h1>
+</header>
+<section>
+  <div id="text-area">
+    <h2>객체란?</h2>
+    <p>
+      자바스크립트는 객체(object) 기반 언어이다. 여기서 객체란 기능 또는 속성을 가지고 있는 데이터를 의미한다. 자바스크립트 객체의 기본적인 사용법은 다음과 같다.
+    </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">객체.메소드();&nbsp;<span style="color:#999999">//&nbsp;메소드를&nbsp;사용할&nbsp;때</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">객체.속성;&nbsp;<span style="color:#999999">//&nbsp;속성값을&nbsp;조회할&nbsp;때</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">객체.속성&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;값;&nbsp;<span style="color:#999999">//&nbsp;속성값을&nbsp;변경할&nbsp;때</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+    <p>아래는 우리에게 익숙한 객체 사용 예이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(<span style="color:#ffd500">'안녕하세요'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(<span style="color:#4be6fa">document</span>.contentType);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.fgColor&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'red'</span>;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+
+    <h2>객체의 종류</h2>
+    <p>
+      자바스크립트 객체는 크게 내장 객체, 브라우저 객체 모델(BOM), 문서 객체 모델(DOM)로 나눌 수 있다.   
+    </p>
+
+    <h2>내장 객체</h2>
+    <p>
+      내장 객체는 자바스크립트 엔진에 내장되어 있어, 필요한 경우 생성해 사용할 수 있다(우리는 이미 Math를 사용해봤습니다). 
+      내장 객체로는 Date, Array, Math 등이 있다(추후 경험해 볼 예정입니다).
+    </p>
+
+    <h2>브라우저 객체 모델(BOM)</h2>
+    <p>
+      브라우저에 계층적으로 내장되어 있는 객체들을 브라우저 객체 모델이라고 한다. 브라우저 객체로는 window, screen, location 등이 있다.
+      <br>아래는 브라우저 객체 모델을 활용해 현재 페이지의 링크를 확인하는 코드이다.
+    </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;url&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#4be6fa">window</span>.<span style="color:#4be6fa">location</span>.href;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(url);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+
+    <br>
+    
+    <h2>문서 객체 모델(DOM)</h2>
+    <p>
+      문서 객체 모델이란 HTML 문서 구조를 말한다. HTML 문서 구조 최상위에는 &lt;html&gt;이 있다.<br>
+      자바스크립트 문서 객체 모델은 오래된 브라우저 등에서는 호환이 잘 되지 않는다는 불편함이 따른다.
+    </p>
+    
+    <br><br>
+  </div>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+</script>
+</body>
+</html>

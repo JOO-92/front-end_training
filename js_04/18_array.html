@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 객체</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style>
+  table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  th, td{
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  th{
+    background-color: #eaeaea;
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>배열 객체</h1>
+</header>
+<section>
+  <div id="text-area">
+    <h2>배열</h2>
+    <p>
+      앞서 변수에는 데이터가 한 개만 저장된다고 하였지만, 여러 개의 데이터를 하나의 변수에 저장하는 방법도 존재한다.<br>
+      여러 개의 데이터를 하나의 저장소에 저장하려면 배열(Array) 객체를 생성하면 된다. 배열객체를 생성하는 기본형은 다음과 같다.
+    </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;배열_변수명&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[값1,&nbsp;값2,&nbsp;값3,&nbsp;...];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;배열_변수명&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;<span style="color:#4be6fa">Array</span>(값1,&nbsp;값2,&nbsp;값3,&nbsp;...);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+
+    <br>
+
+    <h2>배열 객체 저장된 데이터 불러오기</h2>
+    <p>
+      배열 객체에 저장된 데이터를 불러올 때의 기본형은 다음과 같다. 
+    </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%">배열_변수명[인덱스번호];</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+    <p>다음은 객체에 저장된 값들을 모두 출력한 예이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;arr&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;[<span style="color:#c10aff">1</span>,<span style="color:#c10aff">2</span>,<span style="color:#c10aff">3</span>,<span style="color:#c10aff">4</span>,<span style="color:#c10aff">5</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(arr[<span style="color:#c10aff">0</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&lt;br&gt;'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(arr[<span style="color:#c10aff">1</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&lt;br&gt;'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(arr[<span style="color:#c10aff">2</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&lt;br&gt;'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(arr[<span style="color:#c10aff">3</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&lt;br&gt;'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.write(arr[<span style="color:#c10aff">4</span>]&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&lt;br&gt;'</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <p>배열의 데이터에 접근할 때 주의해야 할 점은, 첫번째 인덱스가 0으로 시작한다는 점이다.</p>
+
+
+    <h2>배열의 유용한 메소드 및 속성</h2>
+    <p>
+      배열 역시 다른 객체들처러 다양한 메소드를 가지고 있다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>종류</th>
+          <th>의미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>reverse()</td>
+          <td>배열 객체의 데이터 순서를 거꾸로 바꾼 후 반환한다.</td>
+        </tr>
+        <tr>
+          <td>sort()</td>
+          <td>배열 객체의 데이터를 오름차순으로 정렬한다.</td>
+        </tr>
+        <tr>
+          <td>pop()</td>
+          <td>배열에 저장된 데이터 중 마지막 것을 삭제한다.</td>
+        </tr>
+        <tr>
+          <td>push(data)</td>
+          <td>배열 객체 마지막에 데이터를 삽입한다.</td>
+        </tr>
+
+        <tr>
+          <td>length</td>
+          <td>배열 객체의 데이터 개수를 구한다.</td>
+        </tr>
+
+        <tr>
+          <td>splice(index1, n, data)</td>
+          <td>index1부터 n개만큼 데이터를 지우고 data로 대체한다.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br><br>
+  </div>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+</script>
+</body>
+</html>

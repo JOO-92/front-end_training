@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<h1>내장 객체 Date</h1>
+</header>
+<section>
+  <div id="text-area">
+    <h2>예제</h2>
+    <p>
+      아래와 같은 HTML 웹문서를 작성한 다음(이미 작성되어 있음)
+    </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span>페이지&nbsp;접속&nbsp;시간&nbsp;:&nbsp;<span style="color:#f0f0f0">&lt;</span><span style="color:#ff3399">span</span>&nbsp;<span style="color:#a8ff58">id</span>=<span style="color:#ffd500">"time"</span><span style="color:#a8ff58"></span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">span</span><span style="color:#f0f0f0">&gt;</span><span style="color:#f0f0f0">&lt;</span><span style="color:#f0f0f0">/</span><span style="color:#ff3399">p</span><span style="color:#f0f0f0">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+
+    <p>아래와 같은 자바스크립트 코드를 작성한다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;now&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;<span style="color:#4be6fa">Date</span>();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;year&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getFullYear();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;month&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getMonth() + 1;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getDate();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;hour&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getHours();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;min&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getMinutes();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;output&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;year&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'/'</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;month&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'/'</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">'&nbsp;'</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;hour&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;<span style="color:#ffd500">':'</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">+</span>&nbsp;min;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.<span style="color:#4be6fa">getElementById</span>(<span style="color:#ffd500">'time'</span>).textContent&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;output;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <p>결과는 다음과 같을 것이다.</p>
+    <img src="images/17_01.png">
+
+    <h2>Date 객체와 사용</h2>
+    <p>
+      Date 객체는 일자와 시간을 다루기 위한 내장 객체로, 아래와 같은 기능을 가진다.
+    </p>
+    <ul>
+      <li>현재 시간을 가져온다.</li>
+      <li>과거나 미래의 시간을 설정한다.</li>
+      <li>시간 데이터를 계산한다.</li>
+    </ul>
+
+    <p>Date 객체는 초기화가 필요하다. Date 객체를 사용하고 싶은 경우, 위 예제 코드의 1번 행 코드와 같이 초기화를 해주어야 한다. </p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;now&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">new</span>&nbsp;<span style="color:#4be6fa">Date</span>();</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+
+    <p>이 프로그램에서는 Date 객체를 초기화해서 변수 now에 대입하고 있다. new는 객체를 초기화하기 위한 키워드이다. Date 객체를 포함한 몇몇 내장 객체를 new를 사용해서 초기화한 후 사용해야 한다.</p>
+
+
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;year&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getFullYear();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;month&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getMonth() + 1;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;date&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getDate();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;hour&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getHours();</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;min&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;now.getMinutes();</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <p>now 뒤에 오는 기능들은 모두 Date 객체의 메소드이다. 여기서 getMonth() 메소드는 1월부터 12월을 0부터 11이라는 숫자로 표현하므로 주의해야 한다.</p>
+
+    <h2>연습문제 : 12시간 표기법으로 변경하기</h2>
+    <p>위 예제에서는 Date 객체의 getHours 메소드로 가져온 값을 그대로 출력해서 24시간 표기법으로 표기했다. 이 프로그램을
+       약간 수정해서 시간을 12시간 표기법(14시가 오후 2시로)으로 만들어 보자. 결과값을 가공하여 만들어야 한다.
+    </p>
+    <p>힌트</p>
+    <ul>
+      <li>getHours() 로 가져온 숫자가 12보다 큰 13~24라면 1~12로 바꿀 수 있어야 한다.</li>
+      <li>오전 1시와 오후 1시는 헷갈릴 수 있으므로 am인지 pm인지를 표시하는 데이터를 추가하면 좋다.</li>
+    </ul>
+    <p>아래는 결과의 예이다.</p>
+    <img src="images/17_02.png">
+    <hr>
+    <p>페이지 접속 시간 : <span id="time"></span></p>
+    <br><br>
+  </div>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+</script>
+</body>
+</html>

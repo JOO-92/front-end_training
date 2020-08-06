@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문서 객체 모델</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style>
+  table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  th, td{
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  th{
+    background-color: #eaeaea;
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>문서 객체 모델</h1>
+</header>
+<section>
+  <div id="text-area">
+    <h2>문서 객체 모델</h2>
+    <p>
+      HTML 문서의 구조를 가리켜 문서 객체 모델이라 한다. HTML 각 태그마다 기능과 속성을 가지고 있다. 문서 객체 모델 학습의 주된 목적은 
+      자바스크립트를 사용하여 문서 객체를 선택하고 속성 또는 스타일을 정의하기 위함이다.<br>
+      <br>
+      하지만 자바스크립트 문서 객체 모델은 IE8 이하 버전과 그 외 파이어폭스, 크롬, 사파리 등의 브라우저 간에 호환성이 떨어진다는 단점이 있다. <br>
+      그러나 제이쿼리(jquery)는 이런 호환성이 떨어지는 단점들을 대부분 해결하였다(고 하네요).
+    </p>
+
+    <h2>선택자</h2>
+    <p>
+      자바스크립트의 이벤트(event)를 사용하여 어떤 상황이 발생했을 때마다 웹문서가 동적으로 대응하도록 할 수 있다. 그러한 동작을 가능하게 하기 위해서는 문서 객체의 선택자 사용법을 알고 있어야 한다.<br><br>
+      선택자에는 크게 직접 문서에서 요소를 선택해오는 직접 선택자와 선택해 온 문서 객체를 기준으로 가까이에 있는 요소를 선택하는 인접 관계 선택자가 있다.
+    </p>
+
+    <h2>직접 선택자</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>종류</th>
+          <th>의미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>document.getElementById()</td>
+          <td>아이디를 이용해 요소 선택하기.</td>
+        </tr>
+        <tr>
+          <td>document.getElementsByTagName()</td>
+          <td>요소의 이름을 이용해 요소들을 선택하기.</td>
+        </tr>
+        <tr>
+          <td>document.formName.inputName</td>
+          <td>폼 요소에 name 속성을 이용해 요소 선택하기.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>아래는 li 요소중 id가 kimchi인 요소의 색상을 변경하는 예제 코드이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.<span style="color:#4be6fa">getElementById</span>(<span style="color:#ffd500">'kimchi'</span>).style.color&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">"red"</span>;</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <p>다음은 모든 li 요소들의 색상을 변경하는 예제 코드이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;lists&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#4be6fa">document</span>.getElementsByTagName(<span style="color:#ffd500">'li'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>(<span style="color:#ff3399">var</span>&nbsp;i&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#c10aff">0</span>;&nbsp;i&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">&lt;</span>&nbsp;lists.<span style="color:#4be6fa">length</span>;&nbsp;i<span style="color:#0086b3"></span><span style="color:#ff3399">+</span><span style="color:#0086b3"></span><span style="color:#ff3399">+</span>){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;lists[i].style.color&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'tomato'</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+
+    <h2>인접 요소 선택자</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>종류</th>
+          <th>의미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>parentNode</td>
+          <td>선택한 요소의 부모요소 선택하기.</td>
+        </tr>
+        <tr>
+          <td>children</td>
+          <td>선택한 요소의 자식요소 선택하기.</td>
+        </tr>
+        <tr>
+          <td>previousSibling</td>
+          <td>선택한 요소의 이전에 오는 형제 요소들만 선택하기.</td>
+        </tr>
+        <tr>
+          <td>nextSibling</td>
+          <td>선택한 요소의 다음에 오는 형제 요소들만 선택하기.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>다음은 li 요소의 형제들을 출력하는 예제 코드이다(약간 헷갈릴 수 있음).</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;el&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#4be6fa">document</span>.getElementsByTagName(<span style="color:#ffd500">'li'</span>)[<span style="color:#c10aff">0</span>];</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">while</span>(el){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;el.nodeName&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ffd500">'LI'</span>&nbsp;?&nbsp;<span style="color:#4be6fa">console</span>.log(el.textContent)&nbsp;:&nbsp;{};</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;el&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;el.nextSibling;</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    
+    <p>다음은 ul 요소의 자식들을 출력하는 예제 코드이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;jap&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#4be6fa">document</span>.<span style="color:#4be6fa">getElementById</span>(<span style="color:#ffd500">'japanese'</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;japList&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;jap.children;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">for</span>(<span style="color:#ff3399">var</span>&nbsp;i&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#c10aff">0</span>;&nbsp;i&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">&lt;</span>&nbsp;japList.<span style="color:#4be6fa">length</span>;&nbsp;i<span style="color:#0086b3"></span><span style="color:#ff3399">+</span><span style="color:#0086b3"></span><span style="color:#ff3399">+</span>){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(japList[i].textContent);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br><br>
+    <hr>
+    <h2>맛있는 음식들</h2>
+    <p>한식</p>
+    <ul>
+      <li>불고기</li>
+      <li id="kimchi">김치</li>
+      <li>비빔밥</li>
+    </ul>
+    <p>일식</p>
+    <ul id="japanese">
+      <li>초밥</li>
+      <li>덮밥</li>
+      <li>돈카츠</li>
+    </ul>
+    <p>중식</p>
+    <ul>
+      <li>마라탕</li>
+      <li>유산슬</li>
+      <li>깐풍기</li>
+    </ul>
+
+    <br><br>
+  </div>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+</script>
+</body>
+</html>

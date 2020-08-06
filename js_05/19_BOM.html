@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>브라우저 객체 모델</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<style>
+  table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  th, td{
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  th{
+    background-color: #eaeaea;
+  }
+</style>
+</head>
+<body>
+<header>
+<h1>브라우저 객체 모델</h1>
+</header>
+<section>
+  <div id="text-area">
+    <h2>브라우저 객체란?</h2>
+    <p>
+      브라우저에 내장된 객체를 브라우저 객체라 한다. window는 브라우저 객체의 최상위 객체이다. window 객체는 하위 객체를 포함하고 있다. 즉, 계층적 구조로 이루어져 있으며 이를 일컬어 브라우저 객체 모델이라고 한다.
+    </p>
+    <img src="images/19_01.png"><br>
+
+    <h2>window 객체</h2>
+    <p>
+      window는 브라우저 객체의 최상위 객체이며, 다음과 같은 메소드를 사용할 수 있다.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>종류</th>
+          <th>의미</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>open()</td>
+          <td>새 창을 열 때 사용한다.</td>
+        </tr>
+        <tr>
+          <td>alert()</td>
+          <td>경고 창을 띄운다.</td>
+        </tr>
+        <tr>
+          <td>prompt()</td>
+          <td>질의응답 창을 띄운다.</td>
+        </tr>
+        <tr>
+          <td>setInterval()</td>
+          <td>일정 간격으로 지속적으로 실행문을 실행시킬 때 사용한다.</td>
+        </tr>
+        <tr>
+          <td>setTimeout()</td>
+          <td>일정 시간 뒤에 실행문을 실행시킬 때 사용한다.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>다음은 open() 메소드의 기본 형태와 사용 예이다.</p>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">window</span>.open(<span style="color:#ffd500">"url"</span>,&nbsp;<span style="color:#ffd500">"창&nbsp;이름"</span>,&nbsp;<span style="color:#ffd500">"옵션(선택&nbsp;사항)"</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+
+    <br>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">window</span>.open(<span style="color:#ffd500">"https://www.naver.com/"</span>,&nbsp;<span style="color:#ffd500">"naver"</span>,&nbsp;<span style="color:#ffd500">"width=400,&nbsp;height=300,&nbsp;left=50,&nbsp;top=10"</span>);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br><br>
+
+    <p>다음은 setInterval() 메소드의 기본 형태와 사용 예이다.</p>
+
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#0086b3"></span><span style="color:#ff3399">&lt;</span>input&nbsp;id<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"stop"</span>&nbsp;type<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"button"</span>&nbsp;value<span style="color:#0086b3"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"그만해!"</span><span style="color:#0086b3"></span><span style="color:#ff3399">&gt;</span></div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+    <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div><div style="line-height:130%">6</div><div style="line-height:130%">7</div><div style="line-height:130%">8</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;count&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#c10aff">1</span>;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;auto&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#4be6fa">setInterval</span>(<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(count<span style="color:#0086b3"></span><span style="color:#ff3399">+</span><span style="color:#0086b3"></span><span style="color:#ff3399">+</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;},&nbsp;<span style="color:#c10aff">1000</span>);</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">document</span>.<span style="color:#4be6fa">getElementById</span>(<span style="color:#ffd500">'stop'</span>).<span style="color:#4be6fa">onclick</span>&nbsp;<span style="color:#0086b3"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>(){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">clearInterval</span>(auto);</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+    <br>
+    <br><br>
+    <hr>
+    <br><br>
+  </div>
+</section>
+<footer>JAVASCRIPT</footer>
+<script>
+
+</script>
+</body>
+</html>

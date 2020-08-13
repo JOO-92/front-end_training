@@ -1,0 +1,62 @@
+@font-face{
+  src: url(fonts/NanumBarunpenB.ttf);
+  font-family: nanumpen;
+}
+
+*{
+  font-family: nanumpen;
+}
+
+html, body{
+  margin: 0; padding: 0;
+  background-color: #eaeaea;
+}
+
+#container{
+  width: 640px;
+  margin: 0 auto;
+  font-size: 24px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+form{
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 15px;
+}
+#signup-table{
+  width: 640px;
+}
+
+th{
+  width: 180px;
+  text-align: right;
+  padding: 5px;
+}
+td{
+  width: 340px;
+  text-align: left;
+  padding-left: 5px;
+}
+input{
+  font-size: 24px;
+  max-width: 240px;
+  padding: 5px;
+}
+
+textarea{
+  resize: none;
+  width: 240px;
+  min-height: 100px;
+}
+
+input, textarea {
+  box-sizing: border-box;
+}
+
+#buttons{
+  margin: 10px 0 0 0;
+  text-align: center;
+}

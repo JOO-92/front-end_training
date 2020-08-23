@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>node.js 웹서버</title>
+</head>
+<body>
+  <form onsubmit="return false;">
+    <input name="userId"><br>
+    <input type="password" name="pw"><br>
+    <input id="submit" type="submit"><br>
+  </form>
+  <script>
+    document.getElementById('submit').onclick = function(){
+      console.log(document.getElementsByTagName('form')[0].userId.value)
+      console.log(document.getElementsByTagName('form')[0].pw.value)
+    }
+  </script>
+</body>
+</html>

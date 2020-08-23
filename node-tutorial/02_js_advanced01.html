@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>최신 자바스크립트</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+<h1>최신 자바스크립트</h1>
+</header>
+<section>
+  <h2>개요</h2>
+  <p>자바스크립트 주기적으로 새로운 버전 및 문법을 출시하고 있다. 또한 노드도 주기적으로 버전을 올리며 변경된 자바스크립트 문법을 반영하고 있다. 
+     따라서 앞으로는 새로운 자바스크립트 문법에 익숙해질 필요가 있다. 여기서는 그 중에서도 실제로 많이 사용되는 몇 가지를 소개한다.</p>
+
+  <h2>디폴트 파라미터</h2>
+  <p>C++나 파이썬 같은 언어에서는 함수의 인자로 디폴트 값을 선언할 수 있다. 최신 자바스크립트에도 이것이 추가되었다. 
+    따라서 함수를 호출하면서 값을 지정하지 않으면 디폴트 값이 사용된다.
+  </p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">function</span>&nbsp;logActivity(<span style="color:#4be6fa">name</span><span style="color:#ff3399">=</span><span style="color:#ffd500">"강윤호"</span>,&nbsp;activity<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#ffd500">"달리기"</span>){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">console</span>.log(`${<span style="color:#4be6fa">name</span>}는&nbsp;${activity}를&nbsp;좋아한다.`)</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">logActivity();</div></div><div style="text-align:right;margin-top:-13px;margin-right:5px;font-size:9px;font-style:italic"></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>파라미터에 인자를 전달하면 새로운 값으로 함수 기능을 수행한다.</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div><div style="line-height:130%">5</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;person&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;{</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#4be6fa">name</span>&nbsp;:&nbsp;<span style="color:#ffd500">"메시"</span>,&nbsp;</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;activity&nbsp;:&nbsp;<span style="color:#ffd500">"축구"</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%">logActivity(person.<span style="color:#4be6fa">name</span>,&nbsp;person.activity);</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br>
+  <h2>화살표 함수</h2>
+  <p>
+    화살표 함수를 사용하면 function 키워드가 없어도 함수를 만들 수 있다. 또한 return을 사용하지 않아도 자동으로 값을 반환할 수 있다.
+  </p>
+  <p>전통적인 방식의 함수</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div><div style="line-height:130%">3</div><div style="line-height:130%">4</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">var</span>&nbsp;heFrom&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;<span style="color:#ff3399">function</span>(town){</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;<span style="color:#ff3399">return</span>&nbsp;`${town}&nbsp;출신의&nbsp;강윤호`</div><div style="padding:0 6px; white-space:pre; line-height:130%">}</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(heFrom(<span style="color:#ffd500">"대전"</span>));</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <p>화살표 함수</p>
+  <div class="colorscripter-code" style="color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#272727;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px;border-right:2px solid #4f4f4f"><div style="margin:0;padding:0;word-break:normal;text-align:right;color:#aaa;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="line-height:130%">1</div><div style="line-height:130%">2</div></div></td><td style="padding:6px 0;text-align:left"><div style="margin:0;padding:0;color:#f0f0f0;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#ff3399">const</span>&nbsp;heFrom&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span>&nbsp;(town)&nbsp;<span style="color:#aaffaa"></span><span style="color:#ff3399">=</span><span style="color:#aaffaa"></span><span style="color:#ff3399">&gt;</span>&nbsp;`${town}&nbsp;출신의&nbsp;강윤호`</div><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#4be6fa">console</span>.log(heFrom(<span style="color:#ffd500">"대전"</span>));</div></div></td><td style="vertical-align:bottom;padding:0 2px 4px 0"></td></tr></table></div>
+  <br>
+
+</section>
+<footer>NODEJS</footer>
+<script>
+const heFrom = (town) => `${town} 출신의 강윤호`
+console.log(heFrom("대전"));
+</script>
+</body>
+</html>
